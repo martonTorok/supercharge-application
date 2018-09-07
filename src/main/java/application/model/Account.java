@@ -9,7 +9,7 @@ public class Account {
     private int id;
     private static int idCounter = 0;
     private BigDecimal balance;
-    private List transactionHistory;
+    private List<Transaction> transactionHistory;
 
     public Account(User user) {
         this.user = user;
