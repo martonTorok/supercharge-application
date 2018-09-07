@@ -38,8 +38,6 @@ public class BankingService {
     public void transfer(int sourceAccountId, int targetAccountId, BigDecimal amount) {
         withdrawal(sourceAccountId, amount);
         deposit(targetAccountId, amount);
-        Transaction transaction = new Transaction(TransactionType.TRANSFER, amount, sourceAccountId, targetAccountId);
-        transactionHistoryService.addTransaction(transaction);
     }
 
     private void validateAmountInput(BigDecimal amount) {
