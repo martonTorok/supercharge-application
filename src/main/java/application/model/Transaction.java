@@ -1,6 +1,7 @@
 package model;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Transaction {
@@ -49,4 +50,14 @@ public class Transaction {
         return dateTime;
     }
 
+    @Override
+    public String toString() {
+        return "Transaction{" +
+                "transactionId=" + transactionId +
+                ", amountOfMoney=" + amountOfMoney +
+                ", sourceAccountId=" + sourceAccountId +
+                ", targetAccountId=" + targetAccountId +
+                ", dateTime=" + new SimpleDateFormat("dd-MM-yy:HH:mm:SS Z").format(dateTime) +
+                '}';
+    }
 }
