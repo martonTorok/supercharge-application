@@ -17,7 +17,7 @@ public class Transaction {
         this.amountOfMoney = amountOfMoney;
         this.sourceAccountId = sourceAccountId;
         this.targetAccountId = targetAccountId;
-        this.transactionId = ++idCounter;
+        this.transactionId = idCounter++;
         this.dateTime = new Date();
     }
 
